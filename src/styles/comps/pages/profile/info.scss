@@ -1,0 +1,38 @@
+.info {
+	width: 100%;
+	@include adaptivePropertyMobile(padding-top, 60, 27);
+
+	&__container {
+		display: flex;
+		gap: 30px;
+	}
+
+	&__image {
+		@include adaptivePropertyMobile(width, 350, 131);
+		@include adaptivePropertyMobile(height, 480, 137);
+		background: #dcdcdc;
+	}
+
+	&__text {
+	}
+
+	h1 {
+		@include adaptivePropertyMobile(font-size, 44, 18);
+		@include adaptivePropertyMobile(padding-bottom, 30, 15);
+		font-weight: 400;
+		letter-spacing: 0.04em;
+		color: #7a523e;
+		font-family: 'Amiri';
+	}
+
+	&__edit {
+	}
+
+	.elem {
+		&__title {
+		}
+
+		&__text {
+		}
+	}
+}
