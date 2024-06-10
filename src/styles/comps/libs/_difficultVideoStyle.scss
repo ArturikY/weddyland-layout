@@ -1,0 +1,174 @@
+.difficult-video {
+    user-select: none;
+    position: relative;
+    width: 500px;
+    height: 300px;
+    margin: 300px auto 0;
+    background-color: #000000;
+    &__screensaver-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    } 
+    &._play &__screensaver-container {
+        display: none;
+    }
+    &__screensaver {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transform: scale(1.3);
+    }
+    &__container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        &>video {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__big-play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        font-size: 50px;
+        color: white;  
+    }
+    &._play:hover &__big-play  {
+        opacity: 1;
+        transition: all 0.5s;
+    }
+    &._play &__big-play {
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    &__control {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.5s 2s;
+        visibility: hidden;
+    }
+    &__play {
+        font-size: 20px;
+        color: white;
+        z-index: 5;
+        margin-right: 10px;
+        position: relative;
+        top: 1px;
+    }
+    &__track {
+        flex: 1 1 auto;
+        height: 15px;
+        z-index: 5;
+        position: relative;
+        display: flex;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            z-index: 5;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #fff;
+            backdrop-filter: blur(10px);
+            border-radius: 5px;
+            opacity: 0.5;
+            transition: height 0.5s 1s;
+        }
+        &:hover::before{
+            height: 3px;
+        }
+        &-scanned {
+            border-radius: 5px;
+            z-index: 7;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 2px;
+            background-color: #747474;
+            transition: height 0.5s 1s;
+        }
+        &:hover &-scanned {
+            height: 3px;
+        }
+        &-uploaded {
+            border-radius: 5px;
+            z-index: 6;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 2px;
+            background-color: #c2c2c2;
+            max-width: 100%;
+            transition: height 0.5s 1s; 
+        }
+        &:hover &-uploaded {
+            height: 3px;
+        }
+        &-point {
+            border-radius: 50%;
+            z-index: 8;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 6px;
+            height: 6px;
+            background-color: rgb(31, 31, 31);
+            transform: translate(-2px, -50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: width 0.5s 1s, height 0.5s 1s, transform 0.5s 1s;
+        }
+        &:hover &-point {
+            width: 7px;
+            height: 7px;
+            transform: translate(-2px, -50%);
+            display: block;
+        }
+    }
+    &:hover &__control {
+        opacity: 1;
+        transition: all 0.5s;
+        visibility: visible;
+    }
+    &._video-move &__control {
+        opacity: 1;
+        visibility: visible;
+    }
+    &._video-move &__track::before{
+        height: 3px;
+    }
+    &._video-move &__track-scanned {
+        height: 3px;
+    }
+    &._video-move &__track-uploaded {
+        height: 3px;
+    }
+    &._video-move &__track-point {
+        width: 7px;
+        height: 7px;
+        transform: translate(-2px, -50%);
+        display: block;
+    }
+
+}

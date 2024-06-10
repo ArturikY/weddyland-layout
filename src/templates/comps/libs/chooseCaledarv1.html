@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/dist/css/test.css">
+  <title>Calendar</title>
+</head>
+<body>
+
+  <section class="calendar block">
+    <div class="calendar__start-date calendar__date">
+      <div class="calendar__fast-search calendar-sd">
+        <span class="calendar__text calendar-sd">ДАТА ОТ</span>
+        <span class="calendar__brief-entry calendar-sd">НЕ ОПРЕДЕЛЕНО</span>
+        <div class="calendar__input-field calendar-sd">
+          <input type="text" maxlength="2" class="calendar__field-day calendar-sd" placeholder="ДД">.<input type="text" maxlength="2" class="calendar__field-month calendar-sd" placeholder="ММ">.<input type="text" maxlength="4" class="calendar__field-year calendar-sd" placeholder="ГГГГ">
+        </div>
+        <ion-icon name="calendar-clear-outline" class="calendar__icon calendar-sd"></ion-icon>
+        <ion-icon name="close-outline" class="calendar__close calendar-sd"></ion-icon>
+      </div>
+      <div class="calendar__change-year calendar-sd">
+        <ion-icon name="chevron-back-outline"></ion-icon>Выберите год<ion-icon name="chevron-back-outline"></ion-icon>
+        <div class="calendar__change-year-choose calendar-sd">
+          <div class="calendar__change-year-choose-wrapper calendar-sd">
+          </div>
+        </div>
+      </div>
+      <div class="calendar__change-month calendar-sd">
+        <ion-icon name="chevron-back-outline"></ion-icon>Выберите месяц<ion-icon name="chevron-back-outline"></ion-icon>
+        <div class="calendar__change-month-choose calendar-sd">
+          <div class="calendar__change-month-choose-wrapper calendar-sd">
+            <div class="calendar__change-month-choose-month calendar-sd">Январь</div>
+            <div class="calendar__change-month-choose-month calendar-sd">Февраль</div>
+            <div class="calendar__change-month-choose-month calendar-sd">Март</div>
+            <div class="calendar__change-month-choose-month calendar-sd">Апрель</div>
+            <div class="calendar__change-month-choose-month calendar-sd">Май</div>
+            <div class="calendar__change-month-choose-month calendar-sd">Июнь</div>
+            <div class="calendar__change-month-choose-month calendar-sd">Июль</div>
+            <div class="calendar__change-month-choose-month calendar-sd">Август</div>
+            <div class="calendar__change-month-choose-month calendar-sd">Сентябрь</div>
+            <div class="calendar__change-month-choose-month calendar-sd">Октябрь</div>
+            <div class="calendar__change-month-choose-month calendar-sd">Ноябрь</div>
+            <div class="calendar__change-month-choose-month calendar-sd">Декабрь</div>
+          </div>
+        </div>
+      </div>
+      <div class="calendar__change-day calendar-sd">
+        <div class="calendar-days__days-week calendar-sd">
+          <span class="calendar-days__day-week calendar-sd">Пн</span>
+          <span class="calendar-days__day-week calendar-sd">Вт</span>
+          <span class="calendar-days__day-week calendar-sd">Ср</span>
+          <span class="calendar-days__day-week calendar-sd">Чт</span>
+          <span class="calendar-days__day-week calendar-sd">Пт</span>
+          <span class="calendar-days__day-week calendar-sd">Сб</span>
+          <span class="calendar-days__day-week calendar-sd">Вс</span>
+        </div>
+        <div class="calendar__calendar-days calendar-sd">
+          <span class="calendar__calendar-day calendar-sd"></span>
+          <span class="calendar__calendar-day calendar-sd"></span>
+          <span class="calendar__calendar-day calendar-sd"></span>
+          <span class="calendar__calendar-day calendar-sd"></span>
+          <span class="calendar__calendar-day calendar-sd"></span>
+          <span class="calendar__calendar-day calendar-sd"></span>
+          <span class="calendar__calendar-day calendar-sd"></span>
+          <span class="calendar__calendar-day calendar-sd">1</span>
+          <span class="calendar__calendar-day calendar-sd">2</span>
+          <span class="calendar__calendar-day calendar-sd">3</span>
+          <span class="calendar__calendar-day calendar-sd">4</span>
+          <span class="calendar__calendar-day calendar-sd">5</span>
+          <span class="calendar__calendar-day calendar-sd">6</span>
+          <span class="calendar__calendar-day calendar-sd">7</span>
+          <span class="calendar__calendar-day calendar-sd">8</span>
+          <span class="calendar__calendar-day calendar-sd">9</span>
+          <span class="calendar__calendar-day calendar-sd">10</span>
+          <span class="calendar__calendar-day calendar-sd">11</span>
+        </div>
+      </div>
+    </div>
+    <div class="calendar__end-date calendar__date">
+      <div class="calendar__fast-search calendar-ed">
+        <span class="calendar__text calendar-ed">ДАТА ДО</span>
+        <span class="calendar__brief-entry calendar-ed">10 января 2024</span>
+        <div class="calendar__input-field calendar-ed">
+          <input type="text" maxlength="2" class="calendar__field-day calendar-ed" placeholder="ДД">.<input type="text" maxlength="2" class="calendar__field-month calendar-ed" placeholder="ММ">.<input type="text" maxlength="4" class="calendar__field-year calendar-ed" placeholder="ГГГГ">
+        </div>
+        <ion-icon name="calendar-clear-outline" class="calendar__icon calendar-ed"></ion-icon>
+        <ion-icon name="close-outline" class="calendar__close calendar-ed"></ion-icon>
+      </div>
+      <div class="calendar__change-year calendar-ed">
+        <ion-icon name="chevron-back-outline"></ion-icon>2024<ion-icon name="chevron-back-outline"></ion-icon>
+        <div class="calendar__change-year-choose calendar-ed">
+          <div class="calendar__change-year-choose-wrapper calendar-ed">
+            <div class="calendar__change-year-choose-year">2024</div>
+            <div class="calendar__change-year-choose-year">2023</div>
+            <div class="calendar__change-year-choose-year">2022</div>
+            <div class="calendar__change-year-choose-year">2021</div>
+            <div class="calendar__change-year-choose-year">2020</div>
+            <div class="calendar__change-year-choose-year">2019</div>
+            <div class="calendar__change-year-choose-year">2018</div>
+            <div class="calendar__change-year-choose-year">2017</div>
+            <div class="calendar__change-year-choose-year">2016</div>
+            <div class="calendar__change-year-choose-year">2015</div>
+            <div class="calendar__change-year-choose-year">2014</div>
+            <div class="calendar__change-year-choose-year">2013</div>
+          </div>
+        </div>
+      </div>
+      <div class="calendar__change-month calendar-ed">
+        <ion-icon name="chevron-back-outline"></ion-icon>январь<ion-icon name="chevron-back-outline"></ion-icon>
+        <div class="calendar__change-month-choose calendar-ed">
+          <div class="calendar__change-month-choose-wrapper calendar-ed">
+            <div class="calendar__change-month-choose-month calendar-ed">Январь</div>
+            <div class="calendar__change-month-choose-month calendar-ed">Февраль</div>
+            <div class="calendar__change-month-choose-month calendar-ed">Март</div>
+            <div class="calendar__change-month-choose-month calendar-ed">Апрель</div>
+            <div class="calendar__change-month-choose-month calendar-ed">Май</div>
+            <div class="calendar__change-month-choose-month calendar-ed">Июнь</div>
+            <div class="calendar__change-month-choose-month calendar-ed">Июль</div>
+            <div class="calendar__change-month-choose-month calendar-ed">Август</div>
+            <div class="calendar__change-month-choose-month calendar-ed">Сентябрь</div>
+            <div class="calendar__change-month-choose-month calendar-ed">Октябрь</div>
+            <div class="calendar__change-month-choose-month calendar-ed">Ноябрь</div>
+            <div class="calendar__change-month-choose-month calendar-ed">Декабрь</div>
+          </div>
+        </div>
+      </div>
+      <div class="calendar__change-day calendar-ed">
+        <div class="calendar-days__days-week calendar-ed">
+          <span class="calendar-days__day-week calendar-ed">Пн</span>
+          <span class="calendar-days__day-week calendar-ed">Вт</span>
+          <span class="calendar-days__day-week calendar-ed">Ср</span>
+          <span class="calendar-days__day-week calendar-ed">Чт</span>
+          <span class="calendar-days__day-week calendar-ed">Пт</span>
+          <span class="calendar-days__day-week calendar-ed">Сб</span>
+          <span class="calendar-days__day-week calendar-ed">Вс</span>
+        </div>
+        <div class="calendar__calendar-days calendar-ed">
+          <span class="calendar__calendar-day calendar-ed">1</span>
+          <span class="calendar__calendar-day calendar-ed">2</span>
+          <span class="calendar__calendar-day calendar-ed">3</span>
+          <span class="calendar__calendar-day calendar-ed">4</span>
+          <span class="calendar__calendar-day calendar-ed">5</span>
+          <span class="calendar__calendar-day calendar-ed">6</span>
+          <span class="calendar__calendar-day calendar-ed">7</span>
+          <span class="calendar__calendar-day calendar-ed">8</span>
+          <span class="calendar__calendar-day calendar-ed">9</span>
+          <span class="calendar__calendar-day calendar-ed">10</span>
+          <span class="calendar__calendar-day calendar-ed">11</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <script src="test.js"></script>
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+

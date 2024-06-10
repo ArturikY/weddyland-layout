@@ -1,0 +1,31 @@
+/*---Mouse slider---*/
+.slider {
+    position: relative;
+    &__wrapper {
+        max-width: fit-content;
+    }
+    &__row {
+        display: flex;
+        user-select: none;
+        width: fit-content;
+        position: relative;
+        &:hover {
+            cursor: grab;
+        }
+        &._grabbing {
+            cursor: grabbing;
+        }
+        &._slider-return-left, &._slider-return-right, &._slider-return-column {
+            transition: transform 1s;
+        }
+    }
+    &__column {
+        display: flex;
+    }
+    &__prev, &__next {
+        cursor: pointer;
+    }
+
+}
+/*!---Mouse slider---!*/
+

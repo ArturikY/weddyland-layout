@@ -1,0 +1,34 @@
+ /*---Popup---*/
+.popup {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    &._active {
+        display: flex;
+        visibility: visible;
+        opacity: 100;
+    }
+    &__container {
+    }
+    &__close {
+        cursor: pointer;
+    }
+    &__link {
+        cursor: pointer;
+    }
+}
+body {
+    position: relative;
+    &._popup-active {
+        overflow: hidden;
+    }
+}
+/*!---Popup---!*/

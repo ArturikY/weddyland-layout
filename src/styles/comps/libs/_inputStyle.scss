@@ -1,0 +1,48 @@
+/*---Drop-down list---*/
+
+
+.drop-list {
+    position: relative;
+    &__choice {
+        font-size: 20px;
+        position: relative;
+    }
+
+    &__wrap {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-color: red;
+    }
+
+    &__list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+
+    &__item {
+    }
+
+    &__input {
+        display: none;
+        &:checked + .drop-list__label {
+            background: #ffe0a6;    
+        }
+    }
+
+    &__label {
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &.wrap  .drop-list__list{
+        display: block;
+    }
+}
+
+/*!---Drop-down list---!*/

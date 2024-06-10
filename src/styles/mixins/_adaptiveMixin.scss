@@ -1,0 +1,43 @@
+//Mixin for adaptive
+
+
+@mixin adaptiveProperty($property, $dValue, $tValue, $mValue) {
+    @media (max-width: #{$containerDesktop + px}) and (min-width: #{$canvasTablet + px}) {
+        #{$property}: calc(#{$tValue + px} + (#{$dValue - $tValue}) * ((100vw - #{$canvasTablet + px}) / (#{$containerDesktop - $canvasTablet})));
+    }
+    @media (max-width: #{$containerTablet + px}) and (min-width: #{$canvasMobile + px}) {
+        #{$property}: calc(#{$mValue + px} + (#{$tValue - $mValue}) * ((100vw - #{$canvasMobile + px}) / (#{$canvasTablet - $canvasMobile})))
+    }
+    @media (max-width: #{$canvasTablet + px}) and (min-width: #{$containerTablet + px}) {
+        #{$property}: #{$tValue + px}
+    }
+    @media (min-width: #{$containerDesktop + px}) {
+        #{$property}: #{$dValue + px}
+    }
+    @media (max-width: #{$canvasMobile + px}) {
+        #{$property}: #{$mValue + px}
+    }
+}
+@mixin adaptivePropertyMobile($property, $dValue, $mValue) {
+    @media (max-width: #{$containerDesktop + px}) and (min-width: #{$canvasMobile + px}) {
+        #{$property}: calc(#{$mValue + px} + (#{$dValue - $mValue}) * ((100vw - #{$canvasMobile + px}) / (#{$containerDesktop - $canvasMobile})));
+    }
+    @media (min-width: #{$containerDesktop + px}) {
+        #{$property}: #{$dValue + px}
+    }
+    @media (max-width: #{$canvasMobile + px}) {
+        #{$property}: #{$mValue + px}
+    }
+}
+@mixin adaptiveDoublePropertyMobile($property, $dValue1, $dValue2, $mValue1, $mValue2) {
+    @media (max-width: #{$containerDesktop + px}) and (min-width: #{$canvasMobile + px}) {
+        #{$property}: calc(#{$mValue1 + px} + (#{$dValue1 - $mValue1}) * ((100vw - #{$canvasMobile + px}) / (#{$containerDesktop - $canvasMobile}))) calc(#{$mValue2 + px} + (#{$dValue2 - $mValue2}) * ((100vw - #{$canvasMobile + px}) / (#{$containerDesktop - $canvasMobile})));
+    }
+    @media (min-width: #{$containerDesktop + px}) {
+        #{$property}: #{$dValue1 + px} #{$dValue2 + px}
+    }
+    @media (max-width: #{$canvasMobile + px}) {
+        #{$property}: #{$mValue1 + px} #{$mValue2 + px}
+    }
+}
+
