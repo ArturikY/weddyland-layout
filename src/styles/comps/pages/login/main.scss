@@ -1,22 +1,26 @@
+
 .login {
   --field-height: 50px;
   --field-width: 358px;
-  --field-radius: 40px;
+  --field-radius: 25px;
 
-  --black: #000000;
-  --light-black: #09090b;
-  --white: #fff;
-  --brown: #7a523e;
-  --light-brown: #cba899;
-  --gray: #71717a;
-  --dark-gray: #B6B6B6;
-  --light-gray: #a9a9a9;
-  --red: #ce001d;
+  $colors : (
+    "black"  : #000000,
+    "light-black"  : #09090b,
+    "white"  : #fff,
+    "brown" : #7a523e,
+    "light-brown" : #cba899,
+    "gray" : #71717a,
+    "dark-gray" : #B6B6B6,
+    "light-gray" : #a9a9a9,
+    "red" : #ce001d,
+  );
 
+  @include colorCssVars($colors);
 
   display: flex;
   height: 100vh;
-  padding-top: var(--header-height);
+  padding-top: calc(var(--header-height) + 10px);
   @media (max-width: 750px) {
     background-color: #f9f4f1;
   };
@@ -105,6 +109,8 @@
   
   &__create-account-link {
     font-weight: 700;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
     color: var(--brown);
     transition: all 0.5s;
     &:hover {
@@ -220,6 +226,9 @@
     top: calc(var(--header-height) + 6vh);
     left: 50%;
     translate: -50%;
+    @media (max-width: 750px) {
+      top: calc(var(--header-height) + 20vh);
+    };
   }
 
   &__close {

@@ -1,0 +1,13 @@
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@mixin colorCssVars($colors) {
+  @each $key, $value in $colors {
+    --#{$key} : #{$value};
+  }
+  @each $key, $value in $colors {
+    --#{$key}-rgb : #{HexToRGB($value)};
+  }
+
+}

@@ -9,8 +9,3 @@ forgotOpen.addEventListener('click', function(e) {
 forgotClose.addEventListener('click', function(e) {
   forgot.classList.remove('open')
 })
-window.addEventListener('resize', function(e) {
-  if (window.innerWidth > 750 && burger.classList.contains('open')) {
-    forgot.classList.remove('open')
-  }
-})

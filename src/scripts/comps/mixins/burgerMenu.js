@@ -10,6 +10,7 @@ burgerClose.addEventListener('click', function(e) {
 })
 window.addEventListener('resize', function(e) {
   if (window.innerWidth > 750 && burger.classList.contains('open')) {
+    console.log(1)
     burger.classList.remove('open')
   }
 })

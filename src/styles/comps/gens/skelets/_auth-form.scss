@@ -1,12 +1,15 @@
-
-
 .auth-form {
-
 
   &__field {
     position: relative;
     &:not(:last-of-type) {
       margin-bottom: 15px;
+    }
+    &.target:has(.auth-form__field-options) {
+      & .auth-form__field-wrapper {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
     }
   }
 
@@ -14,10 +17,10 @@
     display: flex;
     width: var(--field-width);
     height: var(--field-height);
-    border: 1px solid rgba(122, 82, 62, 0.5);
+    border: 1px solid rgba(var(--brown-rgb), 0.8);
     border-radius: var(--field-radius);
-    padding: 7px 15px;
     background-color: var(--white);
+    padding: 7px 15px;
     align-items: center;
   }
 
@@ -58,6 +61,46 @@
     color: var(--light-brown);
     cursor: pointer;
   }
+
+  &__field-open-options {
+    @include adaptivePropertyMobile(font-size, 17, 12);
+    color: var(--light-brown);
+    cursor: pointer;
+  }
+  
+  &__field-options {
+    display: flex;
+    position: absolute;
+    overflow: scroll;
+    z-index: 10;
+    width: 100%;
+    max-height: 120px;
+    padding: 15px;
+    border: 1px solid rgba(var(--brown-rgb), 0.8);
+    border-top: none;
+    border-bottom-left-radius: var(--field-radius);
+    border-bottom-right-radius: var(--field-radius);
+    background-color: var(--white);
+    flex-direction: column;
+    gap: 15px;
+    top: 100%;
+    left: 0px;
+  }
+
+  &__field-options-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__field-option {
+    font-weight: 500;
+    @include adaptivePropertyMobile(font-size, 14, 12);
+    line-height: 1.35;
+    color: var(--black);
+  }
+
 
   &__submit {
     display: flex;
