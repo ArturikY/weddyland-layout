@@ -38,6 +38,8 @@
     "last 5 versions"
   ],
   "dependencies": {
-    "imask": "^7.4.0"
+    "imask": "^7.4.0",
+    "lottie-web": "^5.12.2",
+    "swiper": "^11.1.4"
   }
 }

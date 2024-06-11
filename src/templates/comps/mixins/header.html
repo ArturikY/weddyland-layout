@@ -1,17 +1,41 @@
 <header class="header">
-	<div class="container">
-		<div class="header__content">
-			<div class="header__left">
-				<a href="/">About Us</a><a href="/inspiration.html">Inspiration</a>
-			</div>
-			<img src="./icon/logo.svg" alt="logo" class="logo" />
-			<div class="header__right">
-				<a class="header__faq" href="/faq.html">FAQ</a>
-				<a href="/profile.html"
-					><img src="./icon/profile.svg" alt="profile logo"
-				/></a>
-				<div class="burger-btn"><span></span></div>
-			</div>
-		</div>
-	</div>
+	<ul class="header__container container">
+		<li class="header__link">
+			<a href="/about.html">About Us</a>
+		</li>
+		<li class="header__link">
+			<a href="/inspiration.html">Inspiration</a>
+		</li>
+		<li class="header__logo">
+			<a href="/index.html"><img src="./img/logo.png" alt=""></a>
+		</li>
+		<li class="header__link">
+			<a href="/faq.html">FAQ</a>
+		</li>
+		<li class="header__link">
+			<a href="/profile.html" class="icon">&#xe909;</a>
+		</li>
+		<button class="header__burger">
+			<span></span><span></span><span></span>
+		</button>
+	</ul>
 </header>
+<section class="burger">
+	<div class="burger__close icon">
+		&#xe908;
+	</div>
+	<ul class="burger__links">
+		<li class="burger__link">
+			<a href="/about.html">About Us</a>
+		</li>
+		<li class="burger__link">
+			<a href="/inspiration.html">Inspiration</a>
+		</li>
+		<li class="burger__link">
+			<a href="/faq.html">FAQ</a>
+		</li>
+		<li class="burger__link">
+			<a href="https://www.instagram.com" class="icon">&#xe907;</a>
+		</li>
+	</ul>
+</section>

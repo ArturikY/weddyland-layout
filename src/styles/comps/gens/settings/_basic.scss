@@ -85,7 +85,7 @@ h6 {
 	font-family: 'Icon';
 	src: url('../font/icomoon.ttf');
 	font-weight: normal;
-	font-style: normal;
+	// font-style: normal;
 	font-display: block;
 }
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Inter&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;500&display=swap');
@@ -108,7 +108,7 @@ h6 {
 }
 
 body {
-	font-family: var(--font-family);
+	font-family: var(--font-main);
 	color: var(--black);
 	background-color: var(--white);
 	overflow-x: hidden;
