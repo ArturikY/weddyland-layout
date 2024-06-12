@@ -1,0 +1,31 @@
+.counter {
+	padding-top: 60px;
+
+	h2 {
+		font-family: var(--font-title);
+		@include adaptivePropertyMobile(font-size, 48, 22);
+		font-weight: 400;
+		letter-spacing: 0.04em;
+		color: #7a523e;
+	}
+
+	&__container {
+		text-align: center;
+	}
+
+	&__value {
+		@include adaptivePropertyMobile(padding-top, 50, 30);
+		font-family: var(--font-title);
+		@include adaptivePropertyMobile(font-size, 96, 48);
+		font-weight: 400;
+		color: #c5a99b;
+	}
+
+	&__title {
+		@include adaptivePropertyMobile(font-size, 14, 12);
+		font-weight: 300;
+		letter-spacing: 0.04em;
+		text-align: center;
+		color: #000;
+	}
+}

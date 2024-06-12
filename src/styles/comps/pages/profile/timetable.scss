@@ -1,0 +1,53 @@
+.timetable {
+	@include adaptivePropertyMobile(padding-top, 90, 60);
+
+	&__border {
+		border: 2px solid rgba(188, 168, 158, 0.5);
+		border-radius: 24px;
+		padding: 30px;
+		@media (max-width: 390px) {
+			border: none;
+			border-radius: 0;
+			padding: 0;
+		}
+	}
+
+	h2 {
+		font-family: var(--font-title);
+		@include adaptivePropertyMobile(font-size, 48, 22);
+		font-weight: 400;
+		letter-spacing: 0.04em;
+		color: #7a523e;
+	}
+
+	&__preview {
+		margin-top: 30px;
+		text-align: center;
+		p {
+			@include adaptivePropertyMobile(font-size, 16, 12);
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			text-align: center;
+			color: #000;
+		}
+		button {
+			@include adaptivePropertyMobile(width, 171, 150);
+			@include adaptivePropertyMobile(height, 40, 35);
+			background: #cba899;
+			border-radius: 60px;
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			justify-content: center;
+			margin: 20px auto 0 auto;
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				background: #93786c;
+				color: #fff;
+			}
+		}
+		&.hidden {
+			display: none;
+		}
+	}
+}

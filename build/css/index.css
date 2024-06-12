@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 :root {
-  --font-family: "Montserrat", sans-serif;
+  --font-main: "Montserrat", sans-serif;
+  --font-title: "Amiri", sans-serif;
 }
 
 /*------Zeroing styles------*/
@@ -120,7 +121,7 @@ h6 {
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: var(--font-main);
   color: var(--black);
   background-color: var(--white);
   overflow-x: hidden;
