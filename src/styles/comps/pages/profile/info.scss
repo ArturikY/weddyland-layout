@@ -1,0 +1,98 @@
+.info {
+	width: 100%;
+	@include adaptivePropertyMobile(padding-top, 60, 27);
+
+	&__container {
+		display: flex;
+		gap: 30px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		flex-shrink: 1;
+		width: 100%;
+		@media (max-width: 390px) {
+			display: block;
+		}
+	}
+
+	&__image {
+		@include adaptivePropertyMobile(width, 350, 131);
+		@include adaptivePropertyMobile(height, 480, 137);
+		background: #dcdcdc;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 80px;
+		color: #8a8a8a;
+	}
+
+	h1 {
+		@include adaptivePropertyMobile(font-size, 44, 18);
+		@include adaptivePropertyMobile(padding-bottom, 30, 15);
+		font-weight: 400;
+		letter-spacing: 0.04em;
+		color: #7a523e;
+		font-family: var(--font-title);
+	}
+
+	&__edit {
+	}
+
+	&-elem {
+		@include adaptivePropertyMobile(padding-bottom, 30, 15);
+
+		&__title {
+			@include adaptivePropertyMobile(font-size, 14, 8);
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			color: #7a7a7a;
+			padding-bottom: 8px;
+		}
+
+		&__text {
+			@include adaptivePropertyMobile(font-size, 16, 12);
+			font-weight: 500;
+			font-size: 16px;
+			letter-spacing: 0.04em;
+			color: #000;
+		}
+	}
+
+	&-edit {
+		@include adaptivePropertyMobile(margin-top, 5, 0);
+
+		&__icon {
+			font-family: 'Icon';
+			color: #000;
+		}
+
+		border-radius: 60px;
+		// padding: 16px 26px;
+		@include adaptivePropertyMobile(width, 85, 59);
+		@include adaptivePropertyMobile(height, 29, 20);
+		display: flex;
+		align-items: center;
+		@include adaptivePropertyMobile(gap, 12, 8);
+		justify-content: center;
+		background: #fff;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			background: #cba899;
+			p {
+				color: #fff;
+			}
+			.info-edit__icon {
+				font-family: 'Icon';
+				color: #fff;
+			}
+		}
+
+		p {
+			@include adaptivePropertyMobile(font-size, 14, 8);
+			font-weight: 400;
+			color: #000;
+		}
+	}
+}
