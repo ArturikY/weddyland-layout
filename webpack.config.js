@@ -5,6 +5,7 @@ const config = {
     index: "./src/scripts/index.js",
     login: "./src/scripts/login.js",
     register: "./src/scripts/register.js",
+    timing: "./src/scripts/timing.js",
   },
   output: {
     filename: "[name].js"

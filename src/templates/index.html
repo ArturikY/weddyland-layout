@@ -1,22 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-		/>
-		<link rel="stylesheet" href="css/base.css" />
-		<link rel="stylesheet" href="css/index.css" />
-		<title>Главная</title>
-	</head>
-	<body>
-		<div class="wrapper">
-			@@include("comps/mixins/header.html")
-			<main class="main"></main>
-			@@include("comps/mixins/footer.html")
-		</div>
 
-		<script src="js/index.js"></script>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Weddyland</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/base.css" />
+	<link rel="stylesheet" href="/css/index.css" />
+</head>
+
+<body>
+
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__content">
+					<div class="header__left">
+						<a href="#about">About Us</a><a href="/inspiration.html">Inspiration</a>
+					</div>
+					<a href="/index.html"><img src="/icon/index/logo.svg" alt="logo" class="logo" /></a>
+					<div class="header__right">
+						<a class="header__faq" href="#question">FAQ</a>
+						<a href="/profile.html"><img src="/icon/index/profile.svg" alt="profile logo" /></a>
+						<div class="burger-btn"><span></span></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="banner">
+			<div class="container">
+				<div class="banner__content">
+					<h1>"Shine bright</h1>
+					<p>like a bride"</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="about">
+			<div class="container">
+				<h2>ABOUT US</h2>
+				<div class="about__content">
+					<div class="about__text">
+						<p>
+							Planning your dream wedding is a journey, and we are here to be
+							your trusted guide every step of the way. Together, we'll help
+							you navigate through all the intricate details, from finding the
+							perfect flowers to selecting the most enchanting music.
+						</p>
+						<p>
+							With our decades of experience you'll breeze through the
+							planning process and create unforgettable memories along the
+							way. 
+						</p>
+						<p class="text_last">
+							Planning your dream wedding is a journey, and we are here to be
+							your trusted guide every step of the way. Together, we'll help
+							you navigate through all the intricate details, from finding the
+							perfect flowers to selecting the most enchanting music.
+							Together, we'll help you navigate through all the intricate
+							details, from finding
+						</p>
+					</div>
+					<div class="about__images">
+						<img src="/img/about_us_1.png" alt="about us 1" class="image_big" /><img
+							src="/img/about_us_2.jpg" alt="about us 2" class="image_small" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="services">
+			<div class="container">
+				<div class="services__content">
+					<h2>Our Services</h2>
+					<div class="services__block">
+						<div class="services__h3">
+							<h3>Planning</h3>
+						</div>
+						<div class="services__images">
+							<div class="services__img__container">
+								<img src="/img/services_1.png" alt="wedding1" class="services__img services__img1" />
+								<img src="/img/services_2.png" alt="wedding2" class="services__img services__img2" />
+							</div>
+							<div class="services__img__container">
+								<img src="/img/services_5.png" alt="wedding5" class="services__img services__img5" />
+								<img src="/img/services_3.png" alt="wedding3" class="services__img services__img3" />
+								<img src="/img/services_4.png" alt="wedding4" class="services__img services__img4" />
+							</div>
+						</div>
+						<div class="services__text">
+							<p>
+								We've crafted an easy-to-use wedding planning system just for you. With your own
+								personalized cabinet, you can effortlessly keep track of every detail, from start to
+								finish. We've even included budget reminders to keep you on track and ensure you don't
+								miss a single thing needed for your special day.
+							</p>
+						</div>
+					</div>
+					<div class="services__block block_last">
+						<div class="services__h3">
+							<h3>Trends</h3>
+						</div>
+						<div class="services__images">
+							<div class="services__img__container">
+								<img src="/img/services_6.png" alt="wedding1" class="services__img services__img1" />
+								<img src="/img/services_2.png" alt="wedding2" class="services__img services__img2" />
+							</div>
+							<div class="services__img__container">
+								<img src="/img/services_8.png" alt="wedding5" class="services__img services__img5" />
+								<img src="/img/services_3.png" alt="wedding3" class="services__img services__img3" />
+								<img src="/img/services_4.png" alt="wedding4" class="services__img services__img4" />
+							</div>
+						</div>
+						<div class="services__text">
+							<p>
+								Never miss a beat with our trend updates. Stay in tune with the latest in weddings, from
+								recent events to celebrity highlights. Take inspiration and add a touch of magic to your
+								planning with the hottest trends and specials.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="phrase">
+			<div class="container">
+				<div class="phrase__content">
+					<p class="phrase__1">You can <b>fall in love with beauty</b></p>
+					<p class="phrase__2">but you can only <b>love the soul!</b></p>
+				</div>
+			</div>
+		</section>
+
+		<section class="inspiration">
+			<div class="container">
+				<div class="inspiration__content">
+					<h2>Inspiration</h2>
+					<div class="inspiration__examples">
+						<img src="/img/inspiration_1.png" alt="inspiration 1" />
+						<img src="/img/inspiration_2.png" alt="inspiration 2" />
+						<img src="/img/inspiration_3.png" alt="inspiration 3" />
+					</div>
+					<a href="/inspiration.html">
+						<p>More</p>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="history">
+			<div class="container">
+				<div class="history__content">
+					<div class="history__img">
+						<img src="/img/history.png" alt="history" />
+						<div class="history__shadow"></div>
+					</div>
+					<div class="history__text">
+						<div class="history__text__container">
+							<h4>our history</h4>
+							<p>
+								Hello future Bride,
+								Here we are!
+							</p>
+							<p>
+								Two girls with a wealth of event planning experience, we've been in the game for quite
+								some time now. We've witnessed firsthand the challenges brides face during the planning
+								process. That's why we're extending our help beyond just our local area – we want to be
+								your Main Bridesmaids, no matter where you are on this beautiful planet.
+							</p>
+							<p>
+								With numerous weddings under our belts, we recognize both the excitement and the stress
+								that come with the planning process. Our mission is to ensure that you enjoy every
+								moment of this journey while staying true to your budget and not missing any important
+								detail.
+							</p>
+
+							<p>
+								You'll have access to endless inspiration, unwavering support, and the latest trends in
+								the world of weddings. Whether you have questions, doubts, or simply need guidance,
+								we're here for you every step of the way.
+							</p>
+							<p>Let’s plan the wedding of your dreams!</p>
+
+							</p>
+						</div>
+						<img src="/icon/index/circle.svg" alt="circle history" class="history__circle" />
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="faq" class="faq">
+			<div class="container">
+				<div class="faq__content">
+					<h2>FAQ</h2>
+					<div class="accordion" id="accordionExample">
+						<div class="accordion-item">
+							<h4 class="accordion-header" id="headingOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									How does the website work?
+								</button>
+							</h4>
+							<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									The website helps you to plan a wedding and works as a reminder to ensure you don’t
+									forget anything.
+
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h4 class="accordion-header" id="headingTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									How much does it cost?
+								</button>
+							</h4>
+							<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									The website and app provide maximum information for free.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h4 class="accordion-header" id="headingF">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									Can I add extra details to the checklist?
+								</button>
+							</h4>
+							<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									Yes, you can add any extra information or tasks to the checklist for your
+									convenience.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h4 class="accordion-header" id="headingFour">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+									Can I have a consultation regarding organizing a wedding?
+									If you need an assistance, you can send your questions by email, and the guidance
+									will be provided to you.
+								</button>
+							</h4>
+							<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									<p>
+										Hello, our beautiful soon-to-be bride!
+									</p>
+									<p>
+										We understand how special this moment is for you and your fiancé, and we are
+										here to make sure your wedding will be unforgettable. Our goal is to assist you
+										in planning every detail and serve as a responsible reminder throughout the
+										process.
+									</p>
+									<p>Having been event planners for many years, we have stood by numerous brides, helping them to choose designs, flowers, entertainment, and arranging food tastings. We find joy in this beautiful journey and want nothing more for you than to enjoy every moment of it.
+									</p>
+									<p>Think of us as your trusted bridesmaid, dedicated to bringing your dream wedding to life in any part of the world.
+									</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="question" class="question">
+			<img class="question__bg" src="/img/feedback_bg.jpg" alt="bg">
+			<div class="container">
+				<div class="question__content">
+					<form class="question__form" action="#">
+						<h2>Ask your question here</h2>
+						<input class="question__input" placeholder="E-mail" type="email" />
+						<input class="question__input" placeholder="Name" type="text" />
+						<textarea class="question__input question__input-ask" placeholder="Ask a question"></textarea>
+
+						<button class="question__form-send">Send</button>
+					</form>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__content">
+					<img src="/icon/logo.svg" alt="footer logo" class="footer__logo" />
+					<div class="footer__nav">
+						<a href="#" class="footer__link">About Us</a><a href="#" class="footer__link">Turnkey wedding
+							organization</a><a href="#" class="footer__link">Marriage registration</a><a href="#"
+							class="footer__link">Wedding decor and floristry</a><a href="#"
+							class="footer__link">Portfolio</a><a href="#" class="footer__link">Testimonials</a><a href="#"
+							class="footer__link">Blog</a>
+					</div>
+					<div class="footer__links">
+						<a href="#" class="footer__link">Wedding weekend</a><a href="#" class="footer__link">Locations</a><a
+							href="#" class="footer__link">Wedding at Metrapole restaurant</a><a href="#"
+							class="footer__link">Wedding in a palace</a><a href="#" class="footer__link">Wedding in
+							Konstantinovsky Palace</a>
+						<a href="#" class="footer__link">Wedding in BIP Castle</a><a href="#" class="footer__link">Wedding
+							in a hotel</a>
+					</div>
+					<div class="footer__info">
+						<a href="tel:+749994597777" class="footer__link">+7 (499) 459-77-77</a>
+						<div class="footer__schedule info__elem">
+							<p>Пн-Пт с 9:00 до 22:00</p>
+							<p>Сб-Вс с 11:00 до 17:00</p>
+						</div>
+						<div class="footer__place info__elem">
+							г. Москва, пр-кт Авиастроителей 78, офис 10
+						</div>
+						<img class="footer__inst info__elem" src="/icon/inst.svg" />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8N+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="/js/index.js"></script>
+</body>
 </html>
