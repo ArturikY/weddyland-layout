@@ -3,6 +3,8 @@
 	--black: #000000;
 	--brown: #7a523e;
 
+	--link-transition-duration: 0.2s;
+
 	display: block;
 	position: fixed;
 	z-index: 1000;
@@ -80,13 +82,10 @@
 			font-size: 12px;
 			letter-spacing: 0.04em;
 			color: var(--black);
-			transition: all 0.2s;
+			transition: all var(--link-transition-duration);
 			&:hover {
 				scale: 1.1;
 				color: var(--brown);
-			}
-			&.icon {
-				font-size: 20px;
 			}
 		} 
 	}

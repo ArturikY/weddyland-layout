@@ -10,6 +10,26 @@
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
       }
+      & .auth-form__field-options {
+        display: flex;
+      }
+    }
+    &.error {
+      & .auth-form__field-error-message {
+        display: block;
+      }
+      & .auth-form__field-error-icon {
+        display: block;
+        @media (max-width: 750px) {
+          display: none;
+        };
+      }
+      & .auth-form__field-wrapper {
+        border-color: var(--red);
+      }
+      & .auth-form__field-input {
+        color: var(--red);
+      }
     }
   }
 
@@ -47,19 +67,24 @@
   }
 
   &__field-error-icon {
-    display: block;
     display: none;
     position: absolute;
     top: calc(var(--field-height) / 2);
     right: -16px;
     translate: 100% -50%;
-    font-size: 24px;
-    color: var(--red);
   }
 
   &__field-hidden {
-    color: var(--light-brown);
+    display: block;
+    width: 22px;
+    aspect-ratio: 1/1;
     cursor: pointer;
+    & > svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: var(--light-brown);
+    }
   }
 
   &__field-open-options {
@@ -69,7 +94,7 @@
   }
   
   &__field-options {
-    display: flex;
+    display: none;
     position: absolute;
     overflow: scroll;
     z-index: 10;

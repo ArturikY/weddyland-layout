@@ -1,5 +1,6 @@
 import Swiper from "swiper/bundle";
 
+
 const loginSlider = new Swiper('.login-slider', {
   autoplay: {
     delay: 5000,
