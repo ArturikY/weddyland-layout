@@ -1,6 +1,6 @@
 .timetable {
 	@include adaptivePropertyMobile(padding-top, 90, 60);
-
+	margin-bottom: 120px;
 	&__border {
 		border: 2px solid rgba(188, 168, 158, 0.5);
 		border-radius: 24px;

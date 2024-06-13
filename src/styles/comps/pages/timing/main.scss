@@ -20,6 +20,7 @@
   @include colorCssVars($colors);
 
   padding-top: var(--header-height);
+  margin-bottom: 120px;
   &.void {
     & .timing__title {
       grid-column: 1/-1;

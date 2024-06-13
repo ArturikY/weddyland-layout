@@ -1,8 +1,9 @@
 .info {
-	width: 100%;
-	@include adaptivePropertyMobile(padding-top, 60, 27);
+	@include adaptiveVarMobile(margin-after-header, 60,	27);
+	
 	position: relative;
-
+	width: 100%;
+	padding-top: calc(var(--margin-after-header) + var(--header-height));
 	&__container {
 		display: flex;
 		gap: 30px;
@@ -99,15 +100,17 @@
 }
 
 .gradient-container {
-	position: absolute;
-	@include adaptivePropertyMobile(width, 500, 370);
-	@include adaptivePropertyMobile(height, 600, 462);
-	background: linear-gradient(to left bottom, #f6e8e4, #fff);
-	background: -webkit-linear-gradient(right top, #f6e8e4, #fff);
-	background: -moz-linear-gradient(right top, #f6e8e4, #fff);
-	background: -o-linear-gradient(right top, #f6e8e4, #fff);
-	background: linear-gradient(to left bottom, #f6e8e4, #fff);
-	top: 0;
-	right: 0;
+	display: block;
 	z-index: -1;
+	position: absolute;
+	@include adaptivePropertyMobile(width, 855, 429);
+	aspect-ratio: 1/1;
+	@include adaptivePropertyMobile(top, -0, -50);
+	@include adaptivePropertyMobile(right, -90, -22);
+	& > svg {
+
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
 }

@@ -150,6 +150,7 @@
 		rotate: 45deg;
 		color: var(--dark-white);
 		font-size: 20px;
+		user-select: none;
 		cursor: pointer;
 		transition: all 0.2s;
 		&:hover {

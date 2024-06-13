@@ -11,7 +11,6 @@ const addPopup = document.querySelector('.timing-event');
 const addPopupClose = addPopup.querySelector('.timing-event__close');
 
 addPopupClose.addEventListener('click', function(e) {
-  console.log(1)
   timing.classList.remove('add-item')
 })
 

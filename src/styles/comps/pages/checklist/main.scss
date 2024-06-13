@@ -1,7 +1,7 @@
 .checklist {
 	width: 100%;
 	@include adaptivePropertyMobile(margin-top, 147, 111);
-
+	margin-bottom: 120px;
 	h1 {
 		@include adaptivePropertyMobile(font-size, 45, 28);
 		@include adaptivePropertyMobile(margin-bottom, 45, 30);
