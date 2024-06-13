@@ -71,6 +71,10 @@
 			margin-right: 10px;
 			margin-bottom: 30px;
 			@include adaptivePropertyMobile(margin-top, 30, 15);
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				background: #93786c;
+			}
 			span,
 			p {
 				@include adaptivePropertyMobile(font-size, 14, 10);
@@ -131,10 +135,19 @@
 					display: flex;
 					justify-content: center;
 					align-items: center;
+					cursor: pointer;
+					transition: all 0.3s ease-in-out;
+					&:hover {
+						background: #efd9ce;
+						span {
+							color: #7a523e;
+						}
+					}
 					span {
 						font-family: 'Icon';
 						@include adaptivePropertyMobile(font-size, 20, 14);
 						color: #efd9ce;
+						transition: all 0.3s ease-in-out;
 					}
 				}
 			}
