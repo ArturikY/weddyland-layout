@@ -1,0 +1,31 @@
+//Mixin for adaptive
+
+
+@mixin adaptiveVar($property, $dValue, $tValue, $mValue) {
+  @media (max-width: #{$containerDesktop + px}) and (min-width: #{$canvasTablet + px}) {
+      #{'--' + $property}: calc(#{$tValue + px} + (#{$dValue - $tValue}) * ((100vw - #{$canvasTablet + px}) / (#{$containerDesktop - $canvasTablet})));
+  }
+  @media (max-width: #{$containerTablet + px}) and (min-width: #{$canvasMobile + px}) {
+      #{'--' + $property}: calc(#{$mValue + px} + (#{$tValue - $mValue}) * ((100vw - #{$canvasMobile + px}) / (#{$canvasTablet - $canvasMobile})))
+  }
+  @media (max-width: #{$canvasTablet + px}) and (min-width: #{$containerTablet + px}) {
+      #{'--' + $property}: #{$tValue + px}
+  }
+  @media (min-width: #{$containerDesktop + px}) {
+      #{'--' + $property}: #{$dValue + px}
+  }
+  @media (max-width: #{$canvasMobile + px}) {
+      #{'--' + $property}: #{$mValue + px}
+  }
+}
+@mixin adaptiveVarMobile($property, $dValue, $mValue) {
+  @media (max-width: #{$containerDesktop + px}) and (min-width: #{$canvasMobile + px}) {
+      #{'--' + $property}: calc(#{$mValue + px} + (#{$dValue - $mValue}) * ((100vw - #{$canvasMobile + px}) / (#{$containerDesktop - $canvasMobile})));
+  }
+  @media (min-width: #{$containerDesktop + px}) {
+      #{'--' + $property}: #{$dValue + px}
+  }
+  @media (max-width: #{$canvasMobile + px}) {
+      #{'--' + $property}: #{$mValue + px}
+  }
+}

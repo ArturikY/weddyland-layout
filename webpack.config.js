@@ -6,6 +6,8 @@ const config = {
     login: "./src/scripts/login.js",
     register: "./src/scripts/register.js",
     timing: "./src/scripts/timing.js",
+    calculator: "./src/scripts/calculator.js",
+    inspiration: "./src/scripts/inspiration.js",
   },
   output: {
     filename: "[name].js"
