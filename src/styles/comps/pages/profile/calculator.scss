@@ -91,6 +91,10 @@
 			align-items: center;
 			gap: 10px;
 			@include adaptivePropertyMobile(margin-top, 40, 30);
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				background: #93786c;
+			}
 			span,
 			p {
 				@include adaptivePropertyMobile(font-size, 14, 10);
@@ -138,10 +142,13 @@
 				font-size: 25px;
 			}
 
-			&__trash {
-			}
-
+			&__trash,
 			&__edit {
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+				&:hover {
+					color: #7a523e;
+				}
 			}
 		}
 		&__show-all {
