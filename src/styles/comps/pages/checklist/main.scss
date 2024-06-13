@@ -1,0 +1,176 @@
+.checklist {
+	width: 100%;
+	@include adaptivePropertyMobile(margin-top, 147, 111);
+
+	h1 {
+		@include adaptivePropertyMobile(font-size, 45, 28);
+		@include adaptivePropertyMobile(margin-bottom, 45, 30);
+		font-weight: 400;
+		letter-spacing: 0.04em;
+		color: #7a523e;
+		font-family: var(--font-title);
+		text-align: center;
+	}
+
+	&__exist {
+		width: 100%;
+		background: #f6e8e4;
+		padding: 30px 30px 60px 30px;
+
+		h3 {
+			@include adaptivePropertyMobile(font-size, 16, 12);
+			font-weight: 700;
+			letter-spacing: 0.04em;
+			color: #000;
+			padding-bottom: 15px;
+			text-align: center;
+		}
+	}
+
+	&__tasks {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 30px;
+		@media (max-width: 455px) {
+			justify-content: start;
+			gap: 0;
+		}
+	}
+
+	&-task {
+		padding-top: 15px;
+	}
+
+	&-btns {
+		margin-top: 15px;
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		justify-content: end;
+
+		&__add,
+		&__edit {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 15px;
+			border-radius: 41px;
+			width: 121px;
+			height: 38px;
+			transition: all 0.3s ease-in-out;
+			.icon {
+				font-family: 'Icon';
+			}
+		}
+		&__add {
+			color: #fff;
+			background: #cba899;
+			&:hover {
+				background: #93786c;
+			}
+			@media (max-width: 823px) {
+				margin-top: 0;
+			}
+		}
+		&__edit {
+			background: #f9f4f1;
+			opacity: 0.2;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__create {
+		background-color: #fbf9f7;
+		@include adaptivePropertyMobile(padding-top, 77, 100);
+		@include adaptivePropertyMobile(padding-bottom, 77, 100);
+		@include adaptivePropertyMobile(margin-top, 30, 60);
+
+		h3 {
+			@include adaptivePropertyMobile(font-size, 16, 12);
+			text-align: center;
+			font-weight: 300;
+			letter-spacing: 0.04em;
+			color: rgba(0, 0, 0, 0.5);
+		}
+
+		button {
+			border-radius: 60px;
+			@include adaptivePropertyMobile(width, 171, 150);
+			@include adaptivePropertyMobile(height, 40, 35);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 15px;
+			background: #cba899;
+			transition: all 0.3s ease-in-out;
+			margin: 30px auto 0 auto;
+			&:hover {
+				background: #baa59a;
+			}
+			p {
+				@include adaptivePropertyMobile(font-size, 14, 10);
+				font-weight: 400;
+				line-height: 171%;
+				letter-spacing: 0.04em;
+				color: #fff;
+			}
+			span {
+				@include adaptivePropertyMobile(font-size, 14, 10);
+				font-family: 'Icon';
+				color: #fff;
+			}
+		}
+
+		&.hidden {
+			display: none;
+		}
+	}
+}
+
+.custom-checkbox-container {
+	display: block;
+	position: relative;
+	padding-left: 25px;
+	cursor: pointer;
+	font-size: 16px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.custom-checkbox {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 15px;
+	width: 15px;
+	background-color: #fff;
+	border-radius: 3px;
+}
+
+.custom-checkbox-container:hover .checkmark {
+	background-color: #eee;
+}
+
+.custom-checkbox-container .custom-checkbox:checked ~ .checkmark {
+	background-color: #fff;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 9' xmlns='http://www.w3.org/2000/svg' fill='%237a523e'%3E%3Cpath d='M4.1 6.1L1.4 3.4 0 4.8 4.1 9 12 1.1 10.6 0 4.1 6.1Z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.custom-checkbox-container .custom-checkbox:checked ~ p {
+	opacity: 0.25; /* Делаем текст полупрозрачным, если чекбокс выбран */
+}
