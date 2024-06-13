@@ -1,8 +1,94 @@
 <article class="timing">
+  <div class="timing__event timing-event">
+    <div class="timing-event__container">
+      <div class="timing-event__close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 8L8 16M8.00001 8L16 16" stroke="#B6B6B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <h3 class="timing-event__title">
+        New event
+      </h3>
+      <form action="" class="timing-event__form">
+        <div class="timing-event__field">
+          <div class="timing-event__field-wrapper">
+            <input type="text" class="timing-event__field-input" placeholder="Event title">
+          </div>
+          <span class="timing-event__field-error">This field is required</span>
+        </div>
+        <div class="timing-event__field">
+          <div class="timing-event__field-wrapper">
+            <textarea type="text" class="timing-event__field-input" row="1" placeholder="Description"></textarea>
+          </div>
+          <span class="timing-event__field-error">This field is required</span>
+        </div>
+        <div class="timing-event__time-fields">
+          <div class="timing-event__field">
+            <div class="timing-event__field-wrapper">
+              <input type="text" class="timing-event__field-input" maxlength="5" placeholder="00:00">
+            </div>
+            <span class="timing-event__field-error">This field is required</span>
+          </div>
+          <span class="timing-event__dash">
+            -
+          </span>
+          <div class="timing-event__field">
+            <div class="timing-event__field-wrapper">
+              <input type="text" class="timing-event__field-input" maxlength="5" placeholder="00:00">
+            </div>
+            <span class="timing-event__field-error">This field is required</span>
+          </div>
+          <div class="timing-event__field">
+            <div class="timing-event__field-wrapper">
+              <input type="text" class="timing-event__field-input" maxlength="2" placeholder="AM">
+              <span class="timing-event__field-options-open"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.875 6.75L8 9.875L11.125 6.75" stroke="#B6B6B6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></span>
+              <div class="timing-event__field-opitons">
+                <div class="timing-event__field-option">
+                  <span>PM</span>
+                </div>
+              </div>
+            </div>
+            <span class="timing-event__field-error">This field is required</span>
+          </div>
+        </div>
+        <button class="timing-event__submit">
+          <span>Save</span>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="timing__delete timing-delete">
+    <div class="timing-delete__container">
+      <div class="timing-delete__close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 8L8 16M8.00001 8L16 16" stroke="#B6B6B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <h3 class="timing-delete__title">
+        Are you sure you want to delete item?
+      </h3>
+      <div class="timing-delete__actions">
+        <div class="timing-delete__action"><span>Yes</span></div>
+        <div class="timing-delete__action"><span>No</span></div>
+      </div>
+    </div>
+  </div>
   <div class="timing__container container">
     <h1 class="timing__title">
       Timing
     </h1>
+    <div class="timing__void timing-void">
+      <h3 class="timing-void__title">
+        You don't have any plans yet, add to your schedule 
+      </h3>
+      <button class="timing-void__add add-item">
+        <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.0002 5.8335V14.1668M5.8335 10.0002H14.1668" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>Add</span>
+      </button>
+    </div>
     <div class="timing__points">
       <section class="timing__point timing-point">
         <div class="timing-point__time">
@@ -20,35 +106,15 @@
           </p>
         </div>
         <div class="timing-point__change">
-          <div class="timing-point__trash">
-            <span class="icon">&#xe90c;</span>
+          <div class="timing-point__trash delete-item">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10.5 10.5V16.5M14.5 10.5V16.5M18.5 6.5V18.5C18.5 19.6046 17.6046 20.5 16.5 20.5H8.5C7.39543 20.5 6.5 19.6046 6.5 18.5V6.5M4.5 6.5H20.5M15.5 6.5V5.5C15.5 4.39543 14.6046 3.5 13.5 3.5H11.5C10.3954 3.5 9.5 4.39543 9.5 5.5V6.5" stroke="#7A523E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
           </div>
-          <div class="timing-point__edit">
-            <span class="icon">&#xe903;</span>
-          </div>
-        </div>
-      </section>
-      <section class="timing__point timing-point">
-        <div class="timing-point__time">
-          <span>8:00</span>
-        </div>
-        <div class="timing-point__heart">
-          <span class="icon">&#xe906;</span>
-        </div>
-        <div class="timing-point__content">
-          <h2 class="timing-point__title">
-            Wake up
-          </h2>
-          <p class="timing-point__description">
-            Wake up, wash up, clean up, eat breakfast and start packing
-          </p>
-        </div>
-        <div class="timing-point__change">
-          <div class="timing-point__trash">
-            <span class="icon">&#xe90c;</span>
-          </div>
-          <div class="timing-point__edit">
-            <span class="icon">&#xe903;</span>
+          <div class="timing-point__edit edit-item">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.5 20.5H21M18.5 10.5L21.5 7.5L17.5 3.5L14.5 6.5M18.5 10.5L8.5 20.5H4.5V16.5L14.5 6.5M18.5 10.5L14.5 6.5" stroke="#7A523E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
         </div>
       </section>
@@ -68,11 +134,43 @@
           </p>
         </div>
         <div class="timing-point__change">
-          <div class="timing-point__trash">
-            <span class="icon">&#xe90c;</span>
+          <div class="timing-point__trash delete-item">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10.5 10.5V16.5M14.5 10.5V16.5M18.5 6.5V18.5C18.5 19.6046 17.6046 20.5 16.5 20.5H8.5C7.39543 20.5 6.5 19.6046 6.5 18.5V6.5M4.5 6.5H20.5M15.5 6.5V5.5C15.5 4.39543 14.6046 3.5 13.5 3.5H11.5C10.3954 3.5 9.5 4.39543 9.5 5.5V6.5" stroke="#7A523E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
           </div>
-          <div class="timing-point__edit">
-            <span class="icon">&#xe903;</span>
+          <div class="timing-point__edit edit-item">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.5 20.5H21M18.5 10.5L21.5 7.5L17.5 3.5L14.5 6.5M18.5 10.5L8.5 20.5H4.5V16.5L14.5 6.5M18.5 10.5L14.5 6.5" stroke="#7A523E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="timing__point timing-point">
+        <div class="timing-point__time">
+          <span>8:00</span>
+        </div>
+        <div class="timing-point__heart">
+          <span class="icon">&#xe906;</span>
+        </div>
+        <div class="timing-point__content">
+          <h2 class="timing-point__title">
+            Wake up
+          </h2>
+          <p class="timing-point__description">
+            Have a makeup artist come in, check the dress and have a stylist come in, check any jewelry needed
+          </p>
+        </div>
+        <div class="timing-point__change">
+          <div class="timing-point__trash delete-item">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10.5 10.5V16.5M14.5 10.5V16.5M18.5 6.5V18.5C18.5 19.6046 17.6046 20.5 16.5 20.5H8.5C7.39543 20.5 6.5 19.6046 6.5 18.5V6.5M4.5 6.5H20.5M15.5 6.5V5.5C15.5 4.39543 14.6046 3.5 13.5 3.5H11.5C10.3954 3.5 9.5 4.39543 9.5 5.5V6.5" stroke="#7A523E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+          </div>
+          <div class="timing-point__edit edit-item">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.5 20.5H21M18.5 10.5L21.5 7.5L17.5 3.5L14.5 6.5M18.5 10.5L8.5 20.5H4.5V16.5L14.5 6.5M18.5 10.5L14.5 6.5" stroke="#7A523E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
         </div>
       </section>
@@ -92,35 +190,15 @@
           </p>
         </div>
         <div class="timing-point__change">
-          <div class="timing-point__trash">
-            <span class="icon">&#xe90c;</span>
+          <div class="timing-point__trash delete-item">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10.5 10.5V16.5M14.5 10.5V16.5M18.5 6.5V18.5C18.5 19.6046 17.6046 20.5 16.5 20.5H8.5C7.39543 20.5 6.5 19.6046 6.5 18.5V6.5M4.5 6.5H20.5M15.5 6.5V5.5C15.5 4.39543 14.6046 3.5 13.5 3.5H11.5C10.3954 3.5 9.5 4.39543 9.5 5.5V6.5" stroke="#7A523E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
           </div>
-          <div class="timing-point__edit">
-            <span class="icon">&#xe903;</span>
-          </div>
-        </div>
-      </section>
-      <section class="timing__point timing-point">
-        <div class="timing-point__time">
-          <span>8:00</span>
-        </div>
-        <div class="timing-point__heart">
-          <span class="icon">&#xe906;</span>
-        </div>
-        <div class="timing-point__content">
-          <h2 class="timing-point__title">
-            Wake up
-          </h2>
-          <p class="timing-point__description">
-            Wake up, wash up, clean up, eat breakfast and start packing
-          </p>
-        </div>
-        <div class="timing-point__change">
-          <div class="timing-point__trash">
-            <span class="icon">&#xe90c;</span>
-          </div>
-          <div class="timing-point__edit">
-            <span class="icon">&#xe903;</span>
+          <div class="timing-point__edit edit-item">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.5 20.5H21M18.5 10.5L21.5 7.5L17.5 3.5L14.5 6.5M18.5 10.5L8.5 20.5H4.5V16.5L14.5 6.5M18.5 10.5L14.5 6.5" stroke="#7A523E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
         </div>
       </section>
@@ -140,21 +218,57 @@
           </p>
         </div>
         <div class="timing-point__change">
-          <div class="timing-point__trash">
-            <span class="icon">&#xe90c;</span>
+          <div class="timing-point__trash delete-item">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10.5 10.5V16.5M14.5 10.5V16.5M18.5 6.5V18.5C18.5 19.6046 17.6046 20.5 16.5 20.5H8.5C7.39543 20.5 6.5 19.6046 6.5 18.5V6.5M4.5 6.5H20.5M15.5 6.5V5.5C15.5 4.39543 14.6046 3.5 13.5 3.5H11.5C10.3954 3.5 9.5 4.39543 9.5 5.5V6.5" stroke="#7A523E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
           </div>
-          <div class="timing-point__edit">
-            <span class="icon">&#xe903;</span>
+          <div class="timing-point__edit edit-item">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.5 20.5H21M18.5 10.5L21.5 7.5L17.5 3.5L14.5 6.5M18.5 10.5L8.5 20.5H4.5V16.5L14.5 6.5M18.5 10.5L14.5 6.5" stroke="#7A523E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="timing__point timing-point">
+        <div class="timing-point__time">
+          <span>8:00</span>
+        </div>
+        <div class="timing-point__heart">
+          <span class="icon">&#xe906;</span>
+        </div>
+        <div class="timing-point__content">
+          <h2 class="timing-point__title">
+            Wake up
+          </h2>
+          <p class="timing-point__description">
+            Wake up, wash up, clean up, eat breakfast and start packing
+          </p>
+        </div>
+        <div class="timing-point__change">
+          <div class="timing-point__trash delete-item">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10.5 10.5V16.5M14.5 10.5V16.5M18.5 6.5V18.5C18.5 19.6046 17.6046 20.5 16.5 20.5H8.5C7.39543 20.5 6.5 19.6046 6.5 18.5V6.5M4.5 6.5H20.5M15.5 6.5V5.5C15.5 4.39543 14.6046 3.5 13.5 3.5H11.5C10.3954 3.5 9.5 4.39543 9.5 5.5V6.5" stroke="#7A523E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+          </div>
+          <div class="timing-point__edit edit-item">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.5 20.5H21M18.5 10.5L21.5 7.5L17.5 3.5L14.5 6.5M18.5 10.5L8.5 20.5H4.5V16.5L14.5 6.5M18.5 10.5L14.5 6.5" stroke="#7A523E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
         </div>
       </section>
     </div>
     <div class="timing__change">
-      <button class="timing__add">
-        <span><span class="icon">&#xe908;</span>Add</span>
+      <button class="timing__add add-item">
+        <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.0002 5.8335V14.1668M5.8335 10.0002H14.1668" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>Add</span>
       </button>
-      <button class="timing__add">
-        <span><span class="icon">&#xe903;</span>Edit</span>
+      <button class="timing__edit">
+        <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.0002 16.6667H17.0835M15.0002 8.33333L17.5002 5.83333L14.1668 2.5L11.6668 5M15.0002 8.33333L6.66683 16.6667H3.3335V13.3333L11.6668 5M15.0002 8.33333L11.6668 5" stroke="#7A523E" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>Edit</span>
       </button>
       <button class="timing__save">
         <span>Save</span>

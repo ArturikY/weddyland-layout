@@ -20,7 +20,7 @@
 
   display: flex;
   height: 100vh;
-  padding-top: calc(var(--header-height) + 10px);
+  padding-top: var(--header-height);
   @media (max-width: 750px) {
     background-color: #f9f4f1;
   };
@@ -164,6 +164,8 @@
 
 .login-slide {
   display: flex;
+  position: relative;
+  isolation: isolate;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
