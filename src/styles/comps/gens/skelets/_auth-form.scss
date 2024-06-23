@@ -5,6 +5,10 @@
     &:not(:last-of-type) {
       margin-bottom: 15px;
     }
+    &.select-field &-input {
+      cursor: pointer;
+      user-select: none;
+    }
     &.target:has(.auth-form__field-options) {
       & .auth-form__field-wrapper {
         border-bottom-left-radius: 0px;
@@ -31,6 +35,20 @@
         color: var(--red);
       }
     }
+    &.selection {
+      & .auth-form__field-options {
+        opacity: 1;
+        translate: 0px
+      }
+      & .auth-form__field-open-options {
+        rotate: 180deg;
+      }
+      & .auth-form__field-wrapper {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom-color: transparent;
+      }
+    } 
   }
 
   &__field-wrapper {
@@ -91,23 +109,24 @@
     @include adaptivePropertyMobile(font-size, 17, 12);
     color: var(--light-brown);
     cursor: pointer;
+    user-select: none;
   }
   
   &__field-options {
-    display: none;
+    display: block;
     position: absolute;
-    overflow: scroll;
+    opacity: 0;
+    translate: -99999px;
+    overflow: hidden;
     z-index: 10;
     width: 100%;
     max-height: 120px;
-    padding: 15px;
     border: 1px solid rgba(var(--brown-rgb), 0.8);
     border-top: none;
     border-bottom-left-radius: var(--field-radius);
     border-bottom-right-radius: var(--field-radius);
     background-color: var(--white);
     flex-direction: column;
-    gap: 15px;
     top: 100%;
     left: 0px;
   }
@@ -116,14 +135,44 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-    gap: 15px;
+    padding: 7.5px 0px; 
   }
 
   &__field-option {
-    font-weight: 500;
+    padding: 7.5px 15px;
     @include adaptivePropertyMobile(font-size, 14, 12);
     line-height: 1.35;
     color: var(--black);
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.075);
+    }
+  }
+
+  &__field-scrollbar-options {
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    right: var(--field-radius);
+    width: 2px;
+    & > span {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      padding: 7.5px 0px;
+      flex-direction: column;
+      left: 0px;
+      cursor: pointer;
+      &::before {
+        content: '';
+        display: block;
+        flex: 1 0 100%;
+        width: 100%;
+        border-radius: 2px;
+        background-color: var(--brown);
+      }
+    }
   }
 
 

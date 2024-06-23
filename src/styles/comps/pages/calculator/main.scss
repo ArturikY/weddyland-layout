@@ -255,7 +255,7 @@
     content: '';
     display: block;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     width: 100%;
     height: 100%;
     border: 1px solid var(--brown);
@@ -283,6 +283,10 @@
   }
 
   &__body {
+    position: relative;
+    z-index: -1;
+    // max-height: 96px;
+    // overflow: hidden;
   }
 
   &__row {
@@ -290,11 +294,13 @@
       display: none;
     }
     &:nth-child(odd) {
-      @include adaptivePropertyMobile(height, 48, 43);
+      // @include adaptivePropertyMobile(height, 48, 43);
+      @include adaptivePropertyMobile(height, 48, 48);
       
     }
     &:nth-child(even) {
-      @include adaptivePropertyMobile(height, 56, 43);
+      // @include adaptivePropertyMobile(height, 56, 43);
+      @include adaptivePropertyMobile(height, 48, 48);
       background-color: var(--light-beige);
     }
   }
